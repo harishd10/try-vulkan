@@ -50,7 +50,7 @@ public:
 
 protected:
     bool createInstance();
-    bool createDevice(vk::PhysicalDeviceType type = vk::PhysicalDeviceType::eDiscreteGpu);
+    bool createDevice(vk::PhysicalDeviceType type);
     bool createCommandPool();
     void createCommandBuffer(vk::UniqueCommandBuffer &commandBuffer);
 

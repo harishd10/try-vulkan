@@ -25,7 +25,7 @@ inline static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(VkDebugUtilsMessageSe
 Headless::Headless() {
     try {
         validate(createInstance(),"createInstance");
-        validate(createDevice(),"createDevice");
+        validate(createDevice(vk::PhysicalDeviceType::eDiscreteGpu),"createDevice");
         validate(createCommandPool(),"createCommandBuffer");
         validate(createFrameBufferAttachments(1024,1024,vk::Format::eR32G32B32A32Sfloat),"createFrameBufferAttachments");
         createRenderPass();
